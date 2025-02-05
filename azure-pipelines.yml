@@ -5,6 +5,8 @@ stages:
   - stage: Dev
     jobs:
       - job: devJob
+        steps:
+          - task: Maven@1
 
   - stage: Test
     condition: failed ()
