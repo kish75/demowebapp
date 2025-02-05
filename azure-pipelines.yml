@@ -6,11 +6,11 @@ stages:
     jobs:
       - job: TestJob
   - stage: Dev
-    dependsOn: Prod
     jobs:  
       - job: DevJOb
 
   - stage: Prod
+    dependsOn: Test
     jobs:
       - job: PordJob
 
