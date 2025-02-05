@@ -4,13 +4,13 @@ trigger:
 pool:
   name: 'TF'
 stages:
-  - stage: A
+  - stage: Test
     jobs:
-      - job: jobA
+      - job: Name
         steps:
           - script: echo "iam kishore"
-  - stage: B
+  - stage: Dev
     jobs:
-      - job: JobB
+      - job: Hi
         steps:
           - script: echo "hi"
