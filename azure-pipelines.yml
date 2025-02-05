@@ -2,20 +2,11 @@ pool:
  name: TF
 
 stages:
-  - stage: QA
+  - stage: Dev
     jobs:
-      - job: QAjob
-
-  - stage: prod
-    jobs:  
-      - job: prodjob
+      - job: devJob
 
   - stage: Test
-    dependsOn: QA
+    condition: failed ()
     jobs:
       - job: Testjob
-
-
-         
-
-          
