@@ -1,24 +1,10 @@
-trigger:
-- main
-
-pool:
- name: TF
-
 stages:
-  - stage: Dev
-    displayName: "Azure pipeline" 
+  - stage: 
+    pool:
+     name: TF
     jobs:
       - job: JobA
-        steps:
-          - script: echo " im kishore"
-
-  - stage: Test
-    jobs:
       - job: JobB
-        steps:
-          - script: echo "kishore"
-
-      - job: JobC
-      - job: jobD
+         
 
           
