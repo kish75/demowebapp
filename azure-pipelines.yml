@@ -1,12 +1,19 @@
+pool:
+ name: TF
+
 stages:
-  - stage: 
-    pool:
-     name: TF
+  - stage: Test
     jobs:
-      - job: JobA
-      - job: JobB
-        pool:
-         name: Default
+      - job: TestJob
+  - stage: Dev
+    jobs:  
+      - job: DevJOb
+
+  - stage: Prod
+    jobs:
+      - job: PordJob
+
+
          
 
           
