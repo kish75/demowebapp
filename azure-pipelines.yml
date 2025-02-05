@@ -1,7 +1,7 @@
 trigger:
 - master
 pool:
-name: ubuntu-latest
+name: TF
 stages:
   - stage: A
 
@@ -9,3 +9,8 @@ stages:
       - job: jobA
         steps:
           - script: echo "iam kishore"
+  - stage: B
+    jobs:
+      - job: JobB
+        steps:
+          - script: echo "hi"
