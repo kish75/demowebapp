@@ -5,6 +5,8 @@ stages:
     jobs:
       - job: JobA
       - job: JobB
+        pool:
+         name: Default
          
 
           
