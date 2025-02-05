@@ -1,15 +1,16 @@
+trigger: none
+
 pool:
  name: TF
 
 stages:
-  - stage: Dev
-    jobs:
-      - job: devJob
-        steps:
-          - task: Maven@1
-      
-
-  - stage: Test
-    condition: failed ('Dev')
-    jobs:
-      - job: Testjob
+  -  stage: Deploy
+     jobs:
+       -  deployment: Test
+          environment: Test
+          strategy: 
+           runOnce:
+             deploy:
+                steps:
+                  - checkout: self
+                  - script: echo " First deployment Job demo"
