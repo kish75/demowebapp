@@ -1,16 +1,23 @@
 trigger:
-- master
+- main
 
 pool:
-  name: 'TF'
+ name: TF
+
 stages:
-  - stage: Test
-    jobs:
-      - job: Name
-        steps:
-          - script: echo "iam kishore"
   - stage: Dev
     jobs:
-      - job: Hi
+      - job: JobA
         steps:
-          - script: echo "hi"
+          - script: echo " im kishore"
+
+  - stage: Test
+    jobs:
+      - job: JobB
+        steps:
+          - script: echo "kishore"
+
+      - job: JobC
+      - job: jobD
+
+          
