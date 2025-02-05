@@ -8,6 +8,6 @@ stages:
       
 
   - stage: Test
-    condition: succeeded ('A')
+    condition: succeeded ('Dev')
     jobs:
       - job: Testjob
