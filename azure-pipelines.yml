@@ -2,17 +2,18 @@ pool:
  name: TF
 
 stages:
-  - stage: Test
+  - stage: QA
     jobs:
-      - job: TestJob
-  - stage: Dev
-    jobs:  
-      - job: DevJOb
+      - job: QAjob
 
-  - stage: Prod
-    dependsOn: Test
+  - stage: prod
+    jobs:  
+      - job: prodjob
+
+  - stage: Test
+    dependsOn: QA
     jobs:
-      - job: PordJob
+      - job: Testjob
 
 
          
