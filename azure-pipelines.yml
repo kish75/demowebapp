@@ -10,6 +10,6 @@ stages:
       
 
   - stage: Test
-    condition: succeeded ('Dev')
+    condition: failed ('Dev')
     jobs:
       - job: Testjob
