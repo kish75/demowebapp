@@ -6,6 +6,7 @@ pool:
 
 stages:
   - stage: Dev
+    displayName: "Azure pipeline" 
     jobs:
       - job: JobA
         steps:
