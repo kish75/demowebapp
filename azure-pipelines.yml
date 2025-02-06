@@ -20,7 +20,7 @@ stages:
       - deployment: Dev
         environment: dev
         strategy:
-         canary:
+         runOnce:
            deploy:
              steps:
                - checkout: self
